@@ -1,5 +1,5 @@
 <template>
-  <div :class="computedClasses">
+  <div v-motion-fade-visible class="dark:text-white " :class="computedClasses">
     <p><slot></slot></p>
   </div>
 </template>
@@ -40,7 +40,7 @@ const sizeVariants = {
   largebold: "text-xl lg:text-2xl font-bold",
   mediumbold: "text-base md:text-lg font-bold",
   mediumbolditalic: "text-base md:text-md font-bold italic",
-  xlbold: "text-3xl lg:text-4xl font-semibold",
+  xlbold: "text-2xl lg:text-4xl font-semibold",
   xxlbold: "text-5xl font-semibold",
 };
 

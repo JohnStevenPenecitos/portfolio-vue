@@ -1,15 +1,29 @@
 <template>
-  <div class="flex justify-center">
-    <nav class="flex gap-8 justify-center items-center bg-white p-2 rounded-full shadow-md">
-      <RouterLink to="/" class="hover:bg-gray-200 p-2 rounded-full">Home</RouterLink>
-      <RouterLink to="/about" class="hover:bg-gray-200 p-2 rounded-full">About</RouterLink>
-      <RouterLink to="/portfolio" class="hover:bg-gray-200 p-2 rounded-full">Portfolio</RouterLink>
-    </nav>
-  </div>
+    <div class="flex justify-center items-center  absolute">
+      <nav
+        class="flex gap-8 justify-center items-center dark:bg-[#0e221b] bg-white  dark:text-white p-2 rounded-full shadow-md"
+      >
+        <RouterLink
+          to="/"
+          class="dark:hover:bg-gray-800 hover:bg-gray-200 p-2 rounded-full"
+          :class="{ 'font-bold': $route.path === '/' }"
+        >
+          Home
+        </RouterLink>
+        <RouterLink
+          to="/about"
+          class="dark:hover:bg-gray-800 hover:bg-gray-200 p-2 rounded-full"
+          :class="{ 'font-bold': $route.path === '/about' }"
+        >
+          About
+        </RouterLink>
+        <RouterLink
+          to="/portfolio"
+          class="dark:hover:bg-gray-800 hover:bg-gray-200 p-2 rounded-full"
+          :class="{ 'font-bold': $route.path === '/portfolio' }"
+        >
+          Portfolio
+        </RouterLink>
+      </nav>
+    </div>
 </template>
-
-<script>
-export default {};
-</script>
-
-

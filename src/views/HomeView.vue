@@ -19,9 +19,9 @@ import Button from "@/components/Button.vue";
       <span class="font-bold">Laravel</span> for developing website and web
       applications and a freelancer.
     </FontText>
-    <div className="flex gap-10">
-      <Button buttonVariant="primary">Contact Me</Button>
-      <Button buttonVariant="secondary">Download CV</Button>
+    <div className="flex lg:gap-10 gap-5">
+      <Button buttonVariant="primary" href="https://www.linkedin.com/in/john-steven-penecitos-38658a26a/" openInNewTab>Contact Me</Button>
+      <Button buttonVariant="secondary" download="Penecitos_Resume.pdf">Download CV</Button>
     </div>
   </div>
 </template>

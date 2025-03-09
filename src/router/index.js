@@ -26,6 +26,11 @@ const router = createRouter({
       name: 'portfolio',
       component: Portfolio,
     },
+    {
+      path: '/try',
+      name: 'try',
+      component: Certificates,
+    },
   ],
 })
 
