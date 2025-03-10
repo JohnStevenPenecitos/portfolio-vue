@@ -43,6 +43,10 @@ import smsImg from "@/assets/system-ss/SMS.png";
 import ilypImg from "@/assets/system-ss/ILYP.png";
 import ciebotImg from "@/assets/system-ss/CIEBOT.png";
 import pokedexImg from "@/assets/system-ss/PokeDex.png";
+import strkImg from "@/assets/system-ss/StreakCard.png";
+import vrznImg from "@/assets/system-ss/Vrzn.png";
+
+
 
 const projects = [
   {
@@ -79,14 +83,14 @@ const projects = [
   },
   {
     name: "Streak Card",
-    image: smsImg,
-    description: "A system designed to track and manage disciplinary actions in schools or organizations. It streamlines sanction logging and improves accountability.",
+    image: strkImg,
+    description: "A digital reward and loyalty tracking system that helps users maintain streaks for activities, encouraging consistency and engagement.",
     isBgImage: true,
   },
   {
     name: "Verizon Bank",
-    image: smsImg,
-    description: "A system designed to track and manage disciplinary actions in schools or organizations. It streamlines sanction logging and improves accountability.",
+    image: vrznImg,
+    description: "A modern banking platform offering secure transactions, intuitive financial management tools, and seamless online banking experiences.",
     isBgImage: true,
   },
 ];
