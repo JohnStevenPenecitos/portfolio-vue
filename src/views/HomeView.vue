@@ -1,16 +1,11 @@
 <script setup>
 import FontText from "@/components/FontText.vue";
-import peneImg from "/pene-img.png";
 import Button from "@/components/Button.vue";
 </script>
 
 <template>
   <div class="flex flex-col justify-center items-center">
-    <img
-      class="h-22 rounded-full border-4 border-white shadow-md"
-      :src="peneImg"
-      alt=""
-    />
+   
     <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
       John Steven R. Penecitos.
     </FontText>

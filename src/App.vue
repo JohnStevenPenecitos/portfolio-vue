@@ -7,8 +7,8 @@ const blobs = ref([
   { id: 1, size: "500px", top: "10%", left: "20%", color: "rgba(173, 232, 213, 0.8)" }, 
   { id: 2, size: "550px", top: "40%", left: "65%", color: "rgba(192, 160, 255, 0.8)" }, 
   { id: 3, size: "500px", top: "70%", left: "30%", color: "rgba(255, 182, 193, 0.8)" }, 
+   {id: 4, size: "500px", top: "0%", left: "70%", color: "rgba(255, 182, 250, 0.8)" }, 
 ]);
-
 
 </script>
 
@@ -18,13 +18,13 @@ const blobs = ref([
       <div
         v-for="blob in blobs"
         :key="blob.id"
-        class="absolute rounded-full blur-[100px] opacity-70 "
+        class="absolute rounded-full dark:blur-[100px] blur-[70px] opacity-70"
         :style="{
           width: blob.size,
           height: blob.size,
           top: blob.top,
           left: blob.left,
-          background: `radial-gradient(circle, ${blob.color} 0%, transparent 80%)`,
+          background: `radial-gradient(circle, ${blob.color} 0%, transparent 96%)`,
         }"
         :initial="{ opacity: 0.5, scale: 1 }"
         :animate="{

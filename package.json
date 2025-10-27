@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.0.9",
     "@vueuse/core": "^12.8.2",
     "@vueuse/motion": "^2.2.6",
+    "aos": "^2.3.4",
     "framer-motion": "^12.4.10",
     "motion-v": "^0.11.1",
     "simplex-noise": "^4.0.3",

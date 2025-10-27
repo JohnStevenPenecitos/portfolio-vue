@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Laravel",
+    "icon": "/icons/Laravel.png"
+  },
+  {
+    "id": 2,
+    "name": "Tailwind CSS",
+    "icon": "/icons/tail-wind.png"
+  },
+  {
+    "id": 3,
+    "name": "MySQL",
+    "icon": "/icons/mysql.avif"
+  },
+  {
+    "id": 4,
+    "name": "jQuery",
+    "icon": "/icons/js.png"
+  },
+  {
+    "id": 5,
+    "name": "Vue.js",
+    "icon": "/icons/vue.png"
+  },
+  {
+    "id": 6,
+    "name": "Firebase",
+    "icon": "/icons/firebase.png"
+  },
+  {
+    "id": 7,
+    "name": "Supabase",
+    "icon": "/icons/supabase.png"
+  },
+  {
+    "id": 8,
+    "name": "PostgreSQL",
+    "icon": "/icons/postgresql.png"
+  },
+  {
+    "id": 9,
+    "name": "PokeAPI",
+    "icon": "/icons/api.png"
+  }
+]
