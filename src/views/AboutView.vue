@@ -116,6 +116,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import FontText from "@/components/FontText.vue";
 import SquareShadow from "@/components/SquareShadow.vue";
 import Icons from "@/components/Icons.vue";
