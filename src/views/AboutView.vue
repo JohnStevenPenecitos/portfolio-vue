@@ -2,15 +2,15 @@
   <div class="w-full flex flex-col items-center gap-56">
     <!-- HERO SECTION -->
     <section
-      class="max-w-4xl mx-auto h-screen flex flex-row justify-center items-center gap-5"
+      class="max-w-4xl mx-auto  flex md:flex-row flex-col justify-center items-center gap-5 mt-20"
     >
       <img
-        class="w-72 rounded-full border-4 border-white shadow-md"
+        class="w-72 rounded-4xl border-4 border-white shadow-md"
         :src="peneImg"
         alt=""
       />
       <div>
-        <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
+        <FontText addedClass="text-[#0e221b] my-4 text-center" sizeVariant="xlbold">
           About Me
         </FontText>
         <FontText addedClass="text-[#0e221b] my-4" sizeVariant="medium">
@@ -93,9 +93,9 @@
     </section>
 
     <!-- TOOLS SECTION -->
-    <section class="flex flex-col justify-center items-center">
+    <section class="flex flex-col justify-center items-center mb-40 bg-amber-500">
       <div
-        class="max-w-4xl mx-auto h-screen flex flex-col justify-center items-center"
+        class="max-w-4xl mx-auto  flex flex-col justify-center items-center"
       >
         <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
           Tools & Tech Stack
@@ -188,18 +188,6 @@ const works = [
       "I monitor, debug, and enhance system performance—improving stability, scalability, and efficiency for production-ready applications.",
   },
 ];
-
-// const tools = [
-//   { icon: "/icons/html-new.png" },
-//   { icon: "/icons/css-new.png" },
-//   { icon: "/icons/js.png" },
-//   { icon: "/icons/php.png" },
-//   { icon: "/icons/typescript.png" },
-//   { icon: "/icons/tail-wind.png" },
-//   { icon: "/icons/Laravel.png" },
-//   { icon: "/icons/mysql.avif" },
-//   { icon: "/icons/mongo.png" },
-// ];
 
 </script>
 

@@ -7,7 +7,7 @@ import Button from "@/components/Button.vue";
   <div class="flex flex-col justify-center items-center">
    
     <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
-      John Steven R. Penecitos.
+      👋Hi! I'm Steven! 
     </FontText>
     <FontText addedClass="text-[#0e221b] text-center" sizeVariant="largebold">
       Experienced in fullstack development, using
