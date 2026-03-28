@@ -2,7 +2,7 @@
   <div class="w-full flex flex-col items-center gap-56">
     <!-- HERO SECTION -->
     <section
-      class="max-w-4xl mx-auto  flex md:flex-row flex-col justify-center items-center gap-5 mt-20"
+      class="max-w-4xl mx-auto flex md:flex-row flex-col justify-center items-center gap-5 mt-20"
     >
       <img
         class="w-72 rounded-4xl border-4 border-white shadow-md"
@@ -10,9 +10,10 @@
         alt=""
       />
       <div>
-        <FontText addedClass="text-[#0e221b] my-4 text-center" sizeVariant="xlbold">
+        <!-- <FontText addedClass="text-[#0e221b] my-4 text-center" sizeVariant="xlbold">
           About Me
-        </FontText>
+        </FontText> -->
+        <TitlePage>About Mess</TitlePage>
         <FontText addedClass="text-[#0e221b] my-4" sizeVariant="medium">
           I’m <span class="font-semibold">John Steven R. Penecitos</span>, a
           passionate
@@ -37,12 +38,10 @@
       </div>
     </section>
 
-    <section
-      class="max-w-4xl flex flex-col justify-center items-center gap-5"
-    >
-        <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
-          My Experiences
-        </FontText>
+    <section class="max-w-4xl flex flex-col justify-center items-center gap-5">
+      <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
+        My Experiences
+      </FontText>
       <div
         class="relative border-l-4 border-[#0e221b] dark:border-zinc-600 pl-6 space-y-10"
       >
@@ -68,7 +67,6 @@
       </div>
     </section>
 
-   
     <section class="w-full mx-auto">
       <div class="max-w-4xl flex flex-col justify-center items-center">
         <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
@@ -93,10 +91,10 @@
     </section>
 
     <!-- TOOLS SECTION -->
-    <section class="flex flex-col justify-center items-center mb-40 bg-amber-500">
-      <div
-        class="max-w-4xl mx-auto  flex flex-col justify-center items-center"
-      >
+    <section
+      class="flex flex-col justify-center items-center mb-40 bg-amber-500"
+    >
+      <div class="max-w-4xl mx-auto flex flex-col justify-center items-center">
         <FontText addedClass="text-[#0e221b] my-4" sizeVariant="xlbold">
           Tools & Tech Stack
         </FontText>
@@ -128,6 +126,7 @@ const scrollToSection = (id) => {
 };
 
 import toolsData from "@/data/tools.json";
+import TitlePage from "@/components/TitlePage.vue";
 
 const tools = ref(toolsData);
 
@@ -177,7 +176,7 @@ const works = [
   },
   {
     title: "Email & Visual Design",
-   icon: "/icons/7.png",
+    icon: "/icons/7.png",
     description:
       "I craft visually engaging email layouts and marketing assets, combining HTML email design and graphic design to deliver cohesive brand visuals.",
   },
@@ -188,7 +187,6 @@ const works = [
       "I monitor, debug, and enhance system performance—improving stability, scalability, and efficiency for production-ready applications.",
   },
 ];
-
 </script>
 
 <style scoped>
