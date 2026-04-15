@@ -1,47 +1,49 @@
 [
   {
     "id": 1,
-    "name": "Laravel",
-    "icon": "/icons/Laravel.png"
-  },
-  {
-    "id": 2,
-    "name": "Tailwind CSS",
-    "icon": "/icons/tail-wind.png"
-  },
-  {
-    "id": 3,
-    "name": "MySQL",
-    "icon": "/icons/mysql.avif"
-  },
-  {
-    "id": 4,
-    "name": "Javascript",
-    "icon": "/icons/js.png"
-  },
-  {
-    "id": 5,
     "name": "HTML",
     "icon": "/icons/html-new.png"
   },
   {
+    "id": 2,
+    "name": "CSS",
+    "icon": "/icons/css-new.png"
+  },
+  {
+    "id": 3,
+    "name": "JS",
+    "icon": "/icons/js.png"
+  },
+  {
+    "id": 4,
+    "name": "PHP",
+    "icon": "/icons/php.png"
+  },
+  {
+    "id": 5,
+    "name": "Typescript",
+    "icon": "/icons/typescript.png"
+  },
+  {
     "id": 6,
-    "name": "MongoDB",
-    "icon": "/icons/mongo.png"
+    "name": "Tailwind",
+    "icon": "/icons/tail-wind.png"
   },
   {
     "id": 7,
-    "name": "Supabase",
-    "icon": "/icons/supabase.png"
+    "name": "Laravel",
+    "icon": "/icons/Laravel.png"
   },
   {
     "id": 8,
-    "name": "PostgreSQL",
-    "icon": "/icons/postgresql.png"
+    "name": "MySQL",
+    "icon": "/icons/mysql.avif"
   },
   {
     "id": 9,
-    "name": "PokeAPI",
-    "icon": "/icons/api.png"
+    "name": "Mongo",
+    "icon": "/icons/mongo.png"
   }
 ]
+
+
