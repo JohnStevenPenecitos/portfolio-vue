@@ -72,6 +72,41 @@
                 </a>
               </div>
             </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <Linkedin class="w-6 h-6" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-foreground">LinkedIn</h3>
+                <a
+                  href="https://www.linkedin.com/in/john-steven-penecitos-38658a26a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  John Steven Penecitos
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <Workflow class="w-6 h-6" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-foreground">Online Jobs</h3>
+                <a
+                  href="https://www.onlinejobs.ph/jobseekers/info/2460534"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  John Steven Penecitos
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -179,6 +214,8 @@ import {
   Mail as MailIcon,
   MessageSquare as MessageSquareIcon,
   Loader2 as Loader2Icon,
+  Linkedin,
+  Workflow,
 } from 'lucide-vue-next'
 import { useIntersectionObserver } from '@vueuse/core'
 import { toast } from 'vue-sonner'

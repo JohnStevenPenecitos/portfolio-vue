@@ -1,7 +1,6 @@
 <template>
   <section id="certificates" class="  py-20 w-full">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!-- Section Header -->
       <div class="mb-12 text-center">
         <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
           Certificates & Achievements
@@ -11,7 +10,6 @@
         </p>
       </div>
 
-      <!-- Certificates Grid -->
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div v-for="certificate in sortedCertificates" :key="certificate.id">
           <CertificateCard :certificate="certificate" />
@@ -25,68 +23,30 @@
 import CertificateCard, { Certificate } from '@/components/cards/CertificateCard.vue';
 import { computed } from 'vue'
 
+import udemyLogo from "@/assets/logo/udemy-logo.png";
+import certLara from "@/assets/certs/cert-laravel.jpg";
+import certn8n from "@/assets/certs/cert-n8n.jpg";
+
+
 const certificates: Certificate[] = [
   {
     id: '1',
-    title: 'AWS Certified Solutions Architect – Associate',
-    category: 'Cloud',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop',
-    href: 'https://aws.amazon.com/certification/',
-    dateIssued: '2024-03-15',
+    title: 'AI Agent Automation using n8n',
+    category: 'Automation',
+    image: certn8n,
+    href: 'https://www.udemy.com/certificate/UC-818558bb-48ed-4549-8f16-8ebc617907c0/',
+    dateIssued: '2026',
     issuer: {
-      name: 'Amazon Web Services',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      name: 'Udemy',
     },
   },
   {
     id: '2',
-    title: 'Google Professional Cloud Developer',
-    category: 'Cloud',
-    image: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800&auto=format&fit=crop',
-    href: 'https://cloud.google.com/certification',
-    dateIssued: '2024-01-20',
-    issuer: {
-      name: 'Google Cloud',
-    },
-  },
-  {
-    id: '3',
-    title: 'Meta Front-End Developer Professional Certificate',
-    category: 'Frontend',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop',
-    href: 'https://www.coursera.org/professional-certificates/meta-front-end-developer',
-    dateIssued: '2023-11-05',
-    issuer: {
-      name: 'Meta / Coursera',
-    },
-  },
-  {
-    id: '4',
-    title: 'MongoDB Associate Developer',
-    category: 'Database',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop',
-    href: 'https://university.mongodb.com/certification',
-    dateIssued: '2023-08-30',
-    issuer: {
-      name: 'MongoDB University',
-    },
-  },
-  {
-    id: '5',
-    title: 'GitHub Actions Certification',
-    category: 'DevOps',
-    image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&auto=format&fit=crop',
-    href: 'https://github.com/education',
-    dateIssued: '2023-06-12',
-    issuer: {
-      name: 'GitHub',
-    },
-  },
-  {
-    id: '6',
-    title: 'Vue.js 3 – The Complete Guide dsaf asf asdf ',
-    category: 'Frontend',
-    dateIssued: '2023-04-01',
+    title: 'REST API Development',
+    category: 'REST API',
+    image: certLara,
+    href: 'https://www.udemy.com/certificate/UC-267b8d85-d05f-4258-a398-271579f255d1/',
+    dateIssued: '2025',
     issuer: {
       name: 'Udemy',
     },

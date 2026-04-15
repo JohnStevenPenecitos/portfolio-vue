@@ -13,71 +13,52 @@
           : 'w-full max-w-7xl h-16 bg-transparent',
       ]"
     >
-      <RouterLink to="/" class="flex items-center space-x-2 group">
-        <div
-          class="p-1.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors"
-        >
+      <!-- Logo -->
+      <button
+        type="button"
+        @click="scrollTo('/')"
+        class="flex items-center space-x-2 group bg-transparent border-none outline-none"
+      >
+        <div class="p-1.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
           <Rocket class="w-5 h-5 text-primary" />
         </div>
-        <span class="text-xl font-bold tracking-tight">JSPDev</span>
-      </RouterLink>
+        <span class="text-xl font-bold tracking-tight">JSP</span>
+      </button>
 
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex md:items-center md:space-x-8">
-        <RouterLink
+        <button
           v-for="link in links"
-          :key="link.path"
-          :to="link.path"
+          :key="link.id"
+          type="button"
           :class="[
-            'p-2 rounded-full transition-all duration-200',
+            'p-2 rounded-full transition-all duration-200 cursor-pointer bg-transparent border-none',
             'dark:hover:bg-gray-800 hover:bg-gray-200',
-            isActive(link.path)
-              ? 'font-semibold text-primary'
-              : 'text-foreground/80',
           ]"
+          @click="scrollTo(link.id)"
         >
           {{ link.name }}
-        </RouterLink>
+        </button>
       </div>
 
-      <!-- CTA Buttons & Theme Toggle (Desktop) -->
+      <!-- CTA Button (Desktop) -->
       <div class="hidden lg:flex items-center gap-4">
-        <ThemeToggle />
-        <RouterLink
-          to="/minigames"
+        <button
+          type="button"
           :class="[
-            'rounded-full shadow-md hover:scale-105 transition-transform',
-            'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500',
-            'text-white font-bold px-4 py-2 flex items-center gap-2',
+            'rounded-full shadow-md shadow-primary/20 bg-primary text-primary-foreground font-medium px-4 py-2 cursor-pointer border-none',
             scrolled ? 'text-sm' : 'text-base',
           ]"
-          @click="
-            trackEvent('navigation_click', {
-              link_name: 'Arcade',
-              link_path: '/minigames',
-              source: 'navbar_desktop',
-            })
-          "
-        >
-          <Rocket class="w-4 h-4 animate-bounce" />
-          Arcade
-        </RouterLink>
-
-        <RouterLink
-          to="/contact"
-          :class="[
-            'rounded-full shadow-md shadow-primary/20 bg-primary text-primary-foreground font-medium px-4 py-2',
-            scrolled ? 'text-sm' : 'text-base',
-          ]"
+          @click="scrollTo('contact')"
         >
           Let's Talk
-        </RouterLink>
+        </button>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center gap-2 lg:hidden">
-        <ThemeToggle />
         <button
+          type="button"
           class="h-8 w-8 flex items-center justify-center rounded-md hover:bg-accent transition-colors"
           @click="mobileMenuOpen = !mobileMenuOpen"
           aria-label="Toggle menu"
@@ -98,45 +79,15 @@
             : 'opacity-0 scale-95 -translate-y-4 pointer-events-none',
         ]"
       >
-        <RouterLink
+        <button
           v-for="link in links"
-          :key="link.path"
-          :to="link.path"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-foreground/80 hover:bg-primary/10 hover:text-primary transition-colors"
-          @click="
-            () => {
-              trackEvent('navigation_click', {
-                link_name: link.name,
-                link_path: link.path,
-                source: 'navbar_mobile',
-              });
-              mobileMenuOpen = false;
-            }
-          "
+          :key="link.id"
+          type="button"
+          class="block w-full text-left px-4 py-3 rounded-xl text-base font-medium text-foreground/80 hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer bg-transparent border-none"
+          @click="scrollTo(link.id)"
         >
           {{ link.name }}
-        </RouterLink>
-
-        <div class="flex flex-col gap-3 pt-2">
-          <RouterLink
-            to="/minigames"
-            class="w-full rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold px-4 py-2 text-center hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-            @click="
-              () => {
-                trackEvent('navigation_click', {
-                  link_name: 'Arcade',
-                  link_path: '/minigames',
-                  source: 'navbar_mobile',
-                });
-                mobileMenuOpen = false;
-              }
-            "
-          >
-            <Rocket class="w-4 h-4" />
-            Arcade Center
-          </RouterLink>
-
-        </div>
+        </button>
       </div>
     </nav>
   </header>
@@ -144,28 +95,30 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useRoute } from "vue-router";
 import { Rocket, Menu, X } from "lucide-vue-next";
 
-const route = useRoute();
 const scrolled = ref(false);
 const mobileMenuOpen = ref(false);
 
 const links = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home",      id: "/"        },
+  { name: "Skills",    id: "services" },
+  { name: "Portfolio", id: "projects" },
+  { name: "Contact",   id: "contact"  },
 ];
 
-const isActive = (path) => route.path === path;
+const scrollTo = (id) => {
+  if (id === "/") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }
+  mobileMenuOpen.value = false;
+};
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 20;
-};
-
-const trackEvent = (event, props) => {
-  console.log("Track:", event, props);
 };
 
 onMounted(() => window.addEventListener("scroll", handleScroll));

@@ -1,9 +1,6 @@
 <template>
-  <section
-    id="services"
-    class="relative  py-24 overflow-hidden"
-  >
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ">
+  <section id="services" class="py-24 overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Crafting Digital <br />
@@ -28,8 +25,8 @@
       </div>
     </div>
 
-    <div class="relative bg-blue-500">
-      <!-- <SkillsMarquee :skills="skills" :pause-on-hover="true" /> -->
+    <div class="">
+      <SkillsMarquee :skills="skills" :pause-on-hover="true" />
     </div>
   </section>
 </template>
@@ -37,7 +34,7 @@
 <script setup>
 import ServicesCard from "@/components/cards/ServicesCard.vue";
 import SkillsMarquee from "@/components/SkillsMarquee.vue";
-import { Layout, Smartphone, Server } from "lucide-vue-next";
+import { Layout, Smartphone, Server, Bot } from "lucide-vue-next";
 import { ref } from "vue";
 
 defineProps({
@@ -56,18 +53,18 @@ const services = [
     color: "text-blue-500",
   },
   {
-    title: "Mobile First Design",
-    description:
-      "Ensuring your application looks and feels amazing on every device, from mobile phones to large desktops.",
-    icon: Smartphone,
-    color: "text-purple-500",
-  },
-  {
     title: "Backend Development",
     description:
       "Building robust server-side applications and RESTful APIs primarily with PHP and Laravel, including thorough API testing to ensure reliability and performance.",
     icon: Server,
     color: "text-green-500",
+  },
+  {
+    title: "Automation",
+    description:
+      "Building automated workflows and integrations that connect systems, eliminate manual tasks, and keep your processes running smoothly in the background.",
+    icon: Bot,
+    color: "text-purple-500",
   },
 ];
 
