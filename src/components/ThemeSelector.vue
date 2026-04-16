@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-const theme = ref("light");
+const theme = ref("dark");
 const themeIcon = ref("fa-solid fa-sun");
 
 const setTheme = (mode) => {
@@ -16,11 +16,11 @@ const setTheme = (mode) => {
 };
 
 const toggleTheme = () => {
-  setTheme(theme.value === "light" ? "dark" : "light");
+  setTheme(theme.value === "dark" ? "light" : "dark");
 };
 
 onMounted(() => {
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") || "dark";
   setTheme(savedTheme);
 });
 </script>

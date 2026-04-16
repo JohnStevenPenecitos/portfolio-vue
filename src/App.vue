@@ -41,7 +41,7 @@ const blobs = ref([
 
 <template>
   <div
-    class="relative flex flex-col p-3 font-display min-h-screen overflow-hidden light"
+    class="relative flex flex-col p-3 font-display min-h-screen overflow-hidden"
   >
     <div
       class="fixed inset-0 overflow-hidden -z-10 pointer-events-none bg-[#f9f7f3] dark:bg-zinc-900"
